@@ -1,7 +1,8 @@
 /* Render preview screenshots of the site with Playwright.
  *
  * Usage:
- *   node scripts/preview.js
+ *   node scripts/preview.js                  (本地文件)
+ *   node scripts/preview.js https://example  (线上网址)
  *
  * Outputs:
  *   _preview_en.png   full-page screenshot (English)
@@ -17,7 +18,7 @@ const CHROME = "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const EDGE = "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe";
 
 const ROOT = path.resolve(__dirname, "..");
-const URL = "file:///" + path.join(ROOT, "index.html").replace(/\\/g, "/");
+const TARGET = process.argv[2] || "file:///" + path.join(ROOT, "index.html").replace(/\\/g, "/");
 
 async function launchBrowser(playwright) {
   try {
@@ -45,7 +46,7 @@ async function launchBrowser(playwright) {
     });
     page.on("pageerror", (err) => pageErrors.push(String(err)));
 
-    await page.goto(URL, { waitUntil: "load" });
+    await page.goto(TARGET, { waitUntil: "load" });
     await page.waitForTimeout(1200);
 
     // --- English QA ---
@@ -79,7 +80,7 @@ async function launchBrowser(playwright) {
     // --- mobile viewport check ---
     const mobile = await context.newPage();
     await mobile.setViewportSize({ width: 390, height: 844 });
-    await mobile.goto(URL, { waitUntil: "load" });
+    await mobile.goto(TARGET, { waitUntil: "load" });
     await mobile.waitForTimeout(800);
     await mobile.screenshot({ path: path.join(ROOT, "_preview_mobile.png"), fullPage: true });
     await mobile.close();
