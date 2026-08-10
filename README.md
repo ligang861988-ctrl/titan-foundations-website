@@ -58,3 +58,31 @@ python scripts/prepare_images.py
 - 确认公司注册名是否就是 Titan Foundations Nigeria Ltd，以及电话号码、邮箱是否要更新。
 - 补上 TikTok / 抖音主页真实链接。
 - 建议申请一个正式域名（如 titanfoundations.ng / titanfoundations.com）后部署上线。
+
+## 搜索引擎收录（SEO）
+
+### 上线后第一步：替换域名占位符
+
+网站已内置 SEO 文件（`robots.txt`、`sitemap.xml`、`index.html` 里的
+`canonical`、Open Graph、结构化数据）。这些文件里的 `YOUR-DOMAIN`
+是占位符，拿到正式网址（如 `https://titanfoundations.netlify.app`）后，
+把下面三处全部替换成正式网址（记得去掉域名前的 `https://` 规则也适用）：
+
+1. `robots.txt` —— Sitemap 那行
+2. `sitemap.xml` —— `<loc>` 标签
+3. `index.html` —— 搜索 `YOUR-DOMAIN`，共 6 处（canonical、OG、Twitter、JSON-LD）
+
+> 也可以把正式网址发给我，我来替换并提交。
+
+### 提交到搜索引擎（各约 5 分钟）
+
+**Google：**
+1. 打开 https://search.google.com/search-console ，用 Google 账号登录
+2. 添加资源 → 选“网址前缀”→ 粘贴你的正式网址 → 验证（托管在 Netlify/GitHub Pages 时通常自动验证）
+3. 左侧“Sitemap”→ 输入 `sitemap.xml` → 提交
+
+**Bing：**
+1. 打开 https://www.bing.com/webmasters 登录
+2. 可以从 Google Search Console 一键导入，或手动添加网址并提交 `sitemap.xml`
+
+一般 1–4 周内开始被收录；之后在 Google 搜索 `site:你的网址` 可确认收录状态。
