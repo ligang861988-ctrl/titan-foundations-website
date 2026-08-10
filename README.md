@@ -35,7 +35,7 @@ node scripts/preview.js
 1. **正文（英文 + 中文）**：都在 `assets/js/main.js` 顶部的 `I18N` 字典里，
    按 `en` / `zh` 分组，改对应 key 即可。
 2. **联系方式**：WhatsApp 号码和邮箱在 `index.html` 的联系区，以及 `main.js` 的
-   `contact.*` 文案里，全站搜索 `2349065625157` / `zhangzhenning5@gmail.com` 就能找到。
+   `contact.*` 文案里，全站搜索 `2348105916614` / `ligang861988@gmail.com` 就能找到。
 3. **社交账号链接**：`index.html` 里搜索 `field.tiktok` 和 `field.douyin` 旁的
    `href="#"`，换成你的 TikTok / 抖音主页链接。
 4. **公司名 / 地址**：搜索 `Sule Abuka` 或 `TITAN` 替换。
@@ -55,8 +55,11 @@ python scripts/prepare_images.py
 
 ## 建议下一步
 
-- 确认公司注册名是否就是 Titan Foundations Nigeria Ltd，以及电话号码、邮箱是否要更新。
-- 补上 TikTok / 抖音主页真实链接。
+- 公司注册名：确认是否就是 Titan Foundations Nigeria Ltd（页脚在用）。
+- 电话 / WhatsApp：+234 810 591 6614；邮箱：ligang861988@gmail.com（已更新为本人信息）。
+- TikTok / 抖音主页链接：当前指向平台首页，等真实主页链接发来后替换
+  （`index.html` 里搜 `field.tiktok` / `field.douyin`）。
+- CAC 公司注册号：等确认后加到页脚和关于区（暂未添加）。
 - 建议申请一个正式域名（如 titanfoundations.ng / titanfoundations.com）后部署上线。
 
 ## 搜索引擎收录（SEO）
