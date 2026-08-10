@@ -64,18 +64,13 @@ python scripts/prepare_images.py
 
 ## 搜索引擎收录（SEO）
 
-### 上线后第一步：替换域名占位符
+### 域名状态
 
-网站已内置 SEO 文件（`robots.txt`、`sitemap.xml`、`index.html` 里的
-`canonical`、Open Graph、结构化数据）。这些文件里的 `YOUR-DOMAIN`
-是占位符，拿到正式网址（如 `https://titanfoundations.netlify.app`）后，
-把下面三处全部替换成正式网址（记得去掉域名前的 `https://` 规则也适用）：
+当前正式网址：https://ligang861988-ctrl.github.io/titan-foundations-website/
 
-1. `robots.txt` —— Sitemap 那行
-2. `sitemap.xml` —— `<loc>` 标签
-3. `index.html` —— 搜索 `YOUR-DOMAIN`，共 6 处（canonical、OG、Twitter、JSON-LD）
-
-> 也可以把正式网址发给我，我来替换并提交。
+`robots.txt`、`sitemap.xml`、`index.html` 里的 canonical / Open Graph / 结构化数据
+已全部指向该网址。以后如果绑定自定义域名，把这三个文件里的旧网址整体替换成新域名
+即可（也可以把新域名发给制作方代改）。
 
 ### 提交到搜索引擎（各约 5 分钟）
 
