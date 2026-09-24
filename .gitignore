@@ -3,3 +3,6 @@ _preview_*.png
 
 # 用于创建 GitHub 用户站点仓库（ligang861988-ctrl.github.io）的待上传文件，不随本站发布
 github-user-site/
+
+# 内部资料（平台关联文案），不作为网站内容发布
+平台关联资料包.md
