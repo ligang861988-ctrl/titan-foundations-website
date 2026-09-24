@@ -717,6 +717,15 @@ html.js .reveal.visible { opacity: 1; transform: none; }
 }
 .footer-brand img { height: 52px; width: auto; margin-bottom: 14px; }
 .footer-brand p { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--gold-light); }
+.footer-brand p.footer-legal {
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 12.5px;
+  line-height: 1.6;
+  letter-spacing: .04em;
+  color: rgba(255, 255, 255, .5);
+  margin-top: 12px;
+}
 .footer-col h3 {
   font-family: var(--sans);
   font-size: 13px;

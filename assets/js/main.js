@@ -35,7 +35,7 @@
       "about.badge": "Years in pile foundation engineering",
       "about.kicker": "Who We Are",
       "about.title": "Chinese Engineering Expertise, Rooted in Lagos.",
-      "about.p1": "Titan Foundations is a specialist foundation engineering company registered in Nigeria, operating from Lagos. We bring together advanced Chinese construction technology and a permanent, locally-based team to deliver foundation solutions that meet both international engineering standards and the realities of the Nigerian construction market.",
+      "about.p1": "Titan Foundations is a specialist foundation engineering company registered in Nigeria, operating from Lagos. We bring together advanced Chinese construction technology and a permanent, locally-based team to deliver foundation solutions that meet both international engineering standards and the realities of the Nigerian construction market. Titan Foundations is the trade name of FIRST TITAN ENGINEERING LTD, registered with the Corporate Affairs Commission (RC 9823352).",
       "about.p2": "Our services span the full foundation engineering cycle — from geotechnical assessment and scheme design, through pile construction and ground improvement, to certified load testing and QA documentation. One accountable partner from first pile to final report.",
       "about.point1": "Deep local roots: Victoria Island & Ikoyi coastal soft soils, congested urban sites, waterlogged Lekki grounds.",
       "about.point2": "International standards: GB & BS EN execution with certified English-language documentation.",
@@ -152,9 +152,10 @@
       "contact.cta.btn": "Chat on WhatsApp",
 
       "footer.tag": "Your Foundation. Built Right.",
+      "footer.legal": "Registered in Nigeria · FIRST TITAN ENGINEERING LTD · RC 9823352",
       "footer.nav": "Explore",
       "footer.contact": "Contact",
-      "footer.credit": "Company website · built from the Titan Foundations Company Profile 2025"
+      "footer.credit": "Company website · built from the Titan Foundations Company Profile"
     },
 
     zh: {
@@ -184,7 +185,7 @@
       "about.badge": "年桩基工程经验",
       "about.kicker": "关于我们",
       "about.title": "中国工程技术，扎根拉各斯。",
-      "about.p1": "泰坦基础工程公司（Titan Foundations）是注册于尼日利亚、总部位于拉各斯的专业基础工程公司。我们将中国先进的施工技术与常驻本地的团队相结合，提供既符合国际工程标准、又适应尼日利亚市场现实的基础工程解决方案。",
+      "about.p1": "泰坦基础工程公司（Titan Foundations）是注册于尼日利亚、总部位于拉各斯的专业基础工程公司。我们将中国先进的施工技术与常驻本地的团队相结合，提供既符合国际工程标准、又适应尼日利亚市场现实的基础工程解决方案。Titan Foundations 是 FIRST TITAN ENGINEERING LTD 的品牌名，已在尼日利亚公司注册局（CAC）注册，注册号 RC 9823352。",
       "about.p2": "我们的服务覆盖基础工程全流程——从岩土勘察与方案设计，到桩基施工与地基处理，再到认证荷载试验与质检文件。从第一根桩到最终报告，全程一个责任方。",
       "about.point1": "深耕本地：熟悉维多利亚岛与伊科伊的滨海软土、拥挤的城市工地，以及莱基的积水地块。",
       "about.point2": "国际标准：按 GB 与 BS EN 标准施工，提供认证的英文文件。",
@@ -301,9 +302,10 @@
       "contact.cta.btn": "打开 WhatsApp 咨询",
 
       "footer.tag": "你的地基，交给专业。",
+      "footer.legal": "尼日利亚注册公司 · FIRST TITAN ENGINEERING LTD · 注册号 RC 9823352",
       "footer.nav": "网站导航",
       "footer.contact": "联系方式",
-      "footer.credit": "公司官网 · 基于《泰坦公司宣传页 2025》制作"
+      "footer.credit": "公司官网 · 基于《泰坦公司宣传页》制作"
     }
   };
 

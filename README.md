@@ -38,7 +38,8 @@ node scripts/preview.js
    `contact.*` 文案里，全站搜索 `2348105916614` / `ligang861988@gmail.com` 就能找到。
 3. **社交账号链接**：`index.html` 里搜索 `field.tiktok` 和 `field.douyin` 旁的
    `href="#"`，换成你的 TikTok / 抖音主页链接。
-4. **公司名 / 地址**：搜索 `Sule Abuka` 或 `TITAN` 替换。
+4. **公司名 / 地址**：法定名称、注册号、地址分别出现在页脚、关于区、结构化数据里，
+   搜索 `FIRST TITAN ENGINEERING LTD`、`RC 9823352`、`Ikate Elegushi` 即可定位。
 5. **视频**：把新视频覆盖到 `assets/video/site-preview.mp4`（建议 15MB 以内），
    文件名不变即可。
 
@@ -55,11 +56,10 @@ python scripts/prepare_images.py
 
 ## 建议下一步
 
-- 公司注册名：确认是否就是 Titan Foundations Nigeria Ltd（页脚在用）。
+- 公司法定名称：FIRST TITAN ENGINEERING LTD（品牌名 Titan Foundations），注册号 RC 9823352，税号 TIN 2622497445816，2026-09-02 由 CAC 签发 —— 已写入页脚、关于区与结构化数据。
 - 电话 / WhatsApp：+234 810 591 6614；邮箱：ligang861988@gmail.com（已更新为本人信息）。
 - TikTok 主页：https://www.tiktok.com/@qianghandebolu（已更新）。
 - 抖音主页：https://v.douyin.com/XR1xkV-Puqk/（已更新）。
-- CAC 公司注册号：等确认后加到页脚和关于区（暂未添加）。
 - 建议申请一个正式域名（如 titanfoundations.ng / titanfoundations.com）后部署上线。
 
 ## 搜索引擎收录（SEO）
