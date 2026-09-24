@@ -18,7 +18,10 @@ const CHROME = "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const EDGE = "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe";
 
 const ROOT = path.resolve(__dirname, "..");
-const TARGET = process.argv[2] || "file:///" + path.join(ROOT, "index.html").replace(/\\/g, "/");
+const arg = process.argv[2];
+const TARGET = !arg
+  ? "file:///" + encodeURI(path.join(ROOT, "index.html").replace(/\\/g, "/"))
+  : (/^(https?|file):/.test(arg) ? arg : "file:///" + encodeURI(path.join(ROOT, arg).replace(/\\/g, "/")));
 
 async function launchBrowser(playwright) {
   try {
@@ -41,10 +44,12 @@ async function launchBrowser(playwright) {
 
     const consoleErrors = [];
     const pageErrors = [];
+    const failedRequests = [];
     page.on("console", (msg) => {
       if (msg.type() === "error") consoleErrors.push(msg.text());
     });
     page.on("pageerror", (err) => pageErrors.push(String(err)));
+    page.on("requestfailed", (req) => failedRequests.push(req.url() + " -> " + (req.failure() && req.failure().errorText)));
 
     await page.goto(TARGET, { waitUntil: "load" });
     await page.waitForTimeout(1200);
@@ -52,7 +57,10 @@ async function launchBrowser(playwright) {
     // --- English QA ---
     const enTitle = await page.title();
     const h1 = await page.locator("h1").innerText();
-    const heroImgLoaded = await page.locator(".hero-bg").evaluate((img) => img.complete && img.naturalWidth > 0);
+    const heroCount = await page.locator(".hero-bg").count();
+    const heroImgLoaded = heroCount === 0
+      ? "n/a (inner page)"
+      : await page.locator(".hero-bg").evaluate((img) => img.complete && img.naturalWidth > 0);
 
     // Scroll through the whole page so lazy images and scroll-reveal elements activate.
     const totalHeight = await page.evaluate(() => document.body.scrollHeight);
@@ -92,6 +100,7 @@ async function launchBrowser(playwright) {
     results.push(`broken images: ${failedImgs.length ? failedImgs.map((i) => i.src).join(", ") : "none"}`);
     results.push(`console errors: ${consoleErrors.length ? consoleErrors.join(" | ") : "none"}`);
     results.push(`page errors: ${pageErrors.length ? pageErrors.join(" | ") : "none"}`);
+    results.push(`failed requests: ${failedRequests.length ? failedRequests.join(" | ") : "none"}`);
     results.push(`title (ZH): ${zhTitle}`);
     results.push(`h1 (ZH): ${zhH1.split("\n").join(" / ")}`);
     results.push(`lang toggle now shows: ${toggleLabel}`);

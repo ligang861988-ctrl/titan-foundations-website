@@ -6,7 +6,11 @@
 
 ```
 （本仓库根目录即网站根目录）
-├── index.html              # 页面主体（结构 + 全部内容）
+├── index.html              # 首页（公司概览 + 核心信息）
+├── services.html           # 服务详情页（6 项服务逐项展开）
+├── projects.html           # 项目业绩页（6 个代表项目）
+├── company.html            # 公司资质页（CAC 注册信息、TIN、地址）
+├── robots.txt / sitemap.xml # 搜索引擎配置（4 个页面均已登记）
 ├── assets/
 │   ├── css/style.css       # 样式（深绿 + 金色，沿用宣传页配色）
 │   ├── js/main.js          # 中英切换、移动端菜单、滚动动效（翻译文案也在这里）
